@@ -45,7 +45,11 @@ const gridLayout = new GridLayout({
   cols: 4,
 })
 
-const newModel = gridLayout.layout(model)
+gridLayout.onLayoutEnd = function(){
+  // 获取model, TODO...
+  console.log(model);
+}
+gridLayout.layout(model);
 
 ```
 
